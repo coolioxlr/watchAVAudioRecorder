@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchAVAudioRecorder_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Status" id="MhE-L4-dlg"/>
+                        <button width="1" alignment="left" title="Start Recording" id="rwc-0N-sN9">
+                            <connections>
+                                <action selector="recordingClicked" destination="AgC-eL-Hgc" id="yjp-eY-j4e"/>
+                            </connections>
+                        </button>
+                        <table alignment="left" id="aW8-uZ-8Qh"/>
+                        <button width="1" alignment="left" title="Play Last Recording" id="qrc-07-dRI">
+                            <connections>
+                                <action selector="playLastRecording" destination="AgC-eL-Hgc" id="di1-W1-u3j"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="recordingBtn" destination="rwc-0N-sN9" id="5r5-Yx-rO8"/>
+                        <outlet property="statusLabel" destination="MhE-L4-dlg" id="EtA-lY-3Oj"/>
+                        <outlet property="table" destination="aW8-uZ-8Qh" id="Mcw-gc-aWC"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
